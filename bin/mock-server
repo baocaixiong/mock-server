@@ -52,7 +52,7 @@ def main():
 
     app = Application(options.port, options.address,
                       options.dir, options.debug, options.application_data)
-    print("Serving on %s:%s.." % (options.address, options.port))
+    print("Serving on http://%s:%s" % (options.address, options.port))
 
     server = HTTPServer(app)
     server.bind(options.port, options.address)
